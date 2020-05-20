@@ -21,6 +21,9 @@ export abstract class BsDatepickerAbstractComponent {
   containerClass: string;
   isOtherMonthsActive: boolean;
 
+  showTodayBtn: boolean;
+  showClearBtn:boolean;
+
   _effects: BsDatepickerEffects;
   _customRangesFish: BsCustomDates[] = [];
 
@@ -61,6 +64,10 @@ export abstract class BsDatepickerAbstractComponent {
   weekHoverHandler(event: WeekViewModel): void {}
 
   monthHoverHandler(event: CellHoverEvent): void {}
+
+   setToday(): void {}
+
+  clearDate():void{}
 
   yearHoverHandler(event: CellHoverEvent): void {}
 
