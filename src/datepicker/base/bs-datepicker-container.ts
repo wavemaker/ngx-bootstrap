@@ -65,8 +65,6 @@ export abstract class BsDatepickerAbstractComponent {
 
   monthHoverHandler(event: CellHoverEvent): void {}
 
-   setToday(): void {}
-
   clearDate():void{}
 
   yearHoverHandler(event: CellHoverEvent): void {}

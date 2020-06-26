@@ -75,7 +75,6 @@ export class BsDatepickerContainerComponent extends BsDatepickerAbstractComponen
 
     this.isOtherMonthsActive = this._config.selectFromOtherMonth;
     this.containerClass = this._config.containerClass;
-    this.showTodayBtn = this._config.showTodayButton;
     this.showClearBtn = this._config.showClearButton;
     this._effects
       .init(this._store)
@@ -116,9 +115,6 @@ export class BsDatepickerContainerComponent extends BsDatepickerAbstractComponen
     this._store.dispatch(this._actions.select(day.date));
   }
 
-  setToday() {
-    this._store.dispatch(this._actions.select(new Date()));
-  }
 
   clearDate(){
     this._store.dispatch(this._actions.select(undefined));
