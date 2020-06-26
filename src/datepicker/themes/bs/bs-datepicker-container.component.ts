@@ -117,7 +117,7 @@ export class BsDatepickerContainerComponent extends BsDatepickerAbstractComponen
 
 
   clearDate(){
-    this._store.dispatch(this._actions.select(undefined));
+    this._store.dispatch(this._actions.select(null));
   }
 
   ngOnDestroy(): void {
