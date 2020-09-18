@@ -46,6 +46,7 @@ export class BsDatepickerContainerComponent extends BsDatepickerAbstractComponen
   ) {
     super();
     this._effects = _effects;
+    this.customRangeBtnLbl = this._config.customRangeButtonLabel;
 
     _renderer.setStyle(_element.nativeElement, 'display', 'block');
     _renderer.setStyle(_element.nativeElement, 'position', 'absolute');
@@ -73,9 +74,16 @@ export class BsDatepickerContainerComponent extends BsDatepickerAbstractComponen
         this.animationState = 'unanimated';
       });
 
+      this.showTodayBtn = this._config.showTodayButton;
+      this.todayPos = this._config.todayPosition;
+
     this.isOtherMonthsActive = this._config.selectFromOtherMonth;
     this.containerClass = this._config.containerClass;
     this.showClearBtn = this._config.showClearButton;
+    this.todayBtnLbl = this._config.todayButtonLabel;
+    this.clearBtnLbl = this._config.clearButtonLabel;
+    this.customRangeBtnLbl = this._config.customRangeButtonLabel;
+    // this.showTodayBtn = this._config.showTodayButton;
     this._effects
       .init(this._store)
       // intial state options
@@ -115,6 +123,11 @@ export class BsDatepickerContainerComponent extends BsDatepickerAbstractComponen
     this._store.dispatch(this._actions.select(day.date));
   }
 
+
+
+  setToday(): void {
+    this._store.dispatch(this._actions.select(new Date()));
+  }
 
   clearDate(){
     this._store.dispatch(this._actions.select(null));

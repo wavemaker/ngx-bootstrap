@@ -984,10 +984,22 @@ export const ngdoc: any = {
         "description": "<p>sets use adaptive position</p>\n"
       },
       {
+        "name": "clearButtonLabel",
+        "defaultValue": "Clear",
+        "type": "string",
+        "description": "<p>Label for &#39;clear&#39; button</p>\n"
+      },
+      {
         "name": "containerClass",
         "defaultValue": "theme-green",
         "type": "string",
         "description": "<p>CSS class which will be applied to datepicker container,\nusually used to set color theme</p>\n"
+      },
+      {
+        "name": "customRangeButtonLabel",
+        "defaultValue": "Custom Range",
+        "type": "string",
+        "description": "<p>Label for &#39;custom range&#39; button</p>\n"
       },
       {
         "name": "customTodayClass",
@@ -1026,11 +1038,6 @@ export const ngdoc: any = {
         "description": "<p>Default mode for all date pickers</p>\n"
       },
       {
-        "name": "showPreviousMonth",
-        "type": "boolean",
-        "description": "<p>Shows previous and current month, instead of current and next (daterangepicker only</p>\n"
-      },
-      {
         "name": "rangeInputFormat",
         "defaultValue": "L",
         "type": "string",
@@ -1044,13 +1051,121 @@ export const ngdoc: any = {
       {
         "name": "selectWeek",
         "type": "boolean",
-        "description": "<p>Makes dates from other months active</p>\n"
+        "description": "<p>Allows select first date of the week by click on week number</p>\n"
+      },
+      {
+        "name": "showClearButton",
+        "defaultValue": "false",
+        "type": "boolean",
+        "description": "<p>Shows clear button</p>\n"
+      },
+      {
+        "name": "showPreviousMonth",
+        "type": "boolean",
+        "description": "<p>Shows previous and current month, instead of current and next (dateRangePicker only)</p>\n"
+      },
+      {
+        "name": "showTodayButton",
+        "defaultValue": "false",
+        "type": "boolean",
+        "description": "<p>Shows &#39;today&#39; button</p>\n"
       },
       {
         "name": "showWeekNumbers",
         "defaultValue": "true",
         "type": "boolean",
         "description": "<p>Allows to hide week numbers in datepicker</p>\n"
+      },
+      {
+        "name": "todayButtonLabel",
+        "defaultValue": "Today",
+        "type": "string",
+        "description": "<p>Label for &#39;today&#39; button</p>\n"
+      },
+      {
+        "name": "todayPosition",
+        "defaultValue": "center",
+        "type": "string",
+        "description": "<p>Positioning of &#39;today&#39; button</p>\n"
+      },
+      {
+        "name": "useUtc",
+        "defaultValue": "false",
+        "type": "boolean",
+        "description": "<p>sets use UTC date time format</p>\n"
+      }
+    ]
+  },
+  "BsDaterangepickerInlineDirective": {
+    "fileName": "src/datepicker/bs-daterangepicker-inline.component.ts",
+    "className": "BsDaterangepickerInlineDirective",
+    "description": "",
+    "selector": "bs-daterangepicker-inline",
+    "exportAs": "bsDaterangepickerInline",
+    "inputs": [
+      {
+        "name": "bsConfig",
+        "type": "Partial<BsDaterangepickerInlineConfig>",
+        "description": "<p>Config object for datepicker</p>\n"
+      },
+      {
+        "name": "bsValue",
+        "type": "Date[]",
+        "description": "<p>Initial value of datepicker</p>\n"
+      },
+      {
+        "name": "dateCustomClasses",
+        "type": "DatepickerDateCustomClasses[]",
+        "description": "<p>Date custom classes</p>\n"
+      },
+      {
+        "name": "datesDisabled",
+        "type": "Date[]",
+        "description": "<p>Disable specific dates</p>\n"
+      },
+      {
+        "name": "isDisabled",
+        "type": "boolean",
+        "description": "<p>Indicates whether datepicker is enabled or not</p>\n"
+      },
+      {
+        "name": "maxDate",
+        "type": "Date",
+        "description": "<p>Maximum date which is available for selection</p>\n"
+      },
+      {
+        "name": "minDate",
+        "type": "Date",
+        "description": "<p>Minimum date which is available for selection</p>\n"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "bsValueChange",
+        "description": "<p>Emits when daterangepicker value has been changed</p>\n"
+      }
+    ],
+    "properties": [],
+    "methods": [
+      {
+        "name": "setConfig",
+        "description": "<p>Set config for datepicker</p>\n",
+        "args": [],
+        "returnType": "void"
+      }
+    ]
+  },
+  "BsDaterangepickerInlineConfig": {
+    "fileName": "src/datepicker/bs-daterangepicker-inline.config.ts",
+    "className": "BsDaterangepickerInlineConfig",
+    "description": "",
+    "methods": [],
+    "properties": [
+      {
+        "name": "isAnimated",
+        "defaultValue": "false",
+        "type": "boolean",
+        "description": "<p>turn on/off animation</p>\n"
       }
     ]
   },
@@ -1189,14 +1304,7 @@ export const ngdoc: any = {
     "className": "BsDaterangepickerConfig",
     "description": "",
     "methods": [],
-    "properties": [
-      {
-        "name": "isAnimated",
-        "defaultValue": "false",
-        "type": "boolean",
-        "description": "<p>turn on/off animation</p>\n"
-      }
-    ]
+    "properties": []
   },
   "BsLocaleService": {
     "fileName": "src/datepicker/bs-locale.service.ts",
@@ -1741,6 +1849,11 @@ export const ngdoc: any = {
     "selector": "bs-custom-date-view",
     "inputs": [
       {
+        "name": "customRangeLabel",
+        "type": "string",
+        "description": ""
+      },
+      {
         "name": "isCustomRangeShown",
         "type": "true",
         "description": ""
@@ -1821,6 +1934,16 @@ export const ngdoc: any = {
     "className": "BsDaterangepickerContainerComponent",
     "description": "",
     "selector": "bs-daterangepicker-container",
+    "inputs": [],
+    "outputs": [],
+    "properties": [],
+    "methods": []
+  },
+  "BsDaterangepickerInlineContainerComponent": {
+    "fileName": "src/datepicker/themes/bs/bs-daterangepicker-inline-container.component.ts",
+    "className": "BsDaterangepickerInlineContainerComponent",
+    "description": "",
+    "selector": "bs-daterangepicker-inline-container",
     "inputs": [],
     "outputs": [],
     "properties": [],
@@ -2010,6 +2133,12 @@ export const ngdoc: any = {
         "defaultValue": "false",
         "type": "boolean",
         "description": "<p>default dropdown auto closing behavior</p>\n"
+      },
+      {
+        "name": "isAnimated",
+        "defaultValue": "false",
+        "type": "boolean",
+        "description": "<p>turn on/off animation</p>\n"
       }
     ]
   },
@@ -2039,6 +2168,11 @@ export const ngdoc: any = {
         "name": "insideClick",
         "type": "boolean",
         "description": "<p>This attribute indicates that the dropdown shouldn&#39;t close on inside click when autoClose is set to true</p>\n"
+      },
+      {
+        "name": "isAnimated",
+        "type": "boolean",
+        "description": "<p>Indicates that dropdown will be animated</p>\n"
       },
       {
         "name": "isDisabled",
@@ -2085,6 +2219,11 @@ export const ngdoc: any = {
         "name": "insideClick",
         "type": "boolean",
         "description": "<p>This attribute indicates that the dropdown shouldn&#39;t close on inside click when autoClose is set to true</p>\n"
+      },
+      {
+        "name": "isAnimated",
+        "type": "boolean",
+        "description": "<p>Indicates that dropdown will be animated</p>\n"
       },
       {
         "name": "isDisabled",
@@ -2833,7 +2972,7 @@ export const ngdoc: any = {
       },
       {
         "name": "type",
-        "type": "string",
+        "type": "ProgressbarType",
         "description": "<p>provide one of the four supported contextual classes: <code>success</code>, <code>info</code>, <code>warning</code>, <code>danger</code></p>\n"
       },
       {
@@ -3172,6 +3311,11 @@ export const ngdoc: any = {
         "description": "<p>if true hours and minutes fields will be disabled</p>\n"
       },
       {
+        "name": "hoursPlaceholder",
+        "type": "string",
+        "description": "<p>placeholder for hours field in timepicker</p>\n"
+      },
+      {
         "name": "hourStep",
         "type": "number",
         "description": "<p>hours change step</p>\n"
@@ -3192,6 +3336,11 @@ export const ngdoc: any = {
         "description": "<p>minimum time user can select</p>\n"
       },
       {
+        "name": "minutesPlaceholder",
+        "type": "string",
+        "description": "<p>placeholder for minutes field in timepicker</p>\n"
+      },
+      {
         "name": "minuteStep",
         "type": "number",
         "description": "<p>hours change step</p>\n"
@@ -3205,6 +3354,11 @@ export const ngdoc: any = {
         "name": "readonlyInput",
         "type": "boolean",
         "description": "<p>if true hours and minutes fields will be readonly</p>\n"
+      },
+      {
+        "name": "secondsPlaceholder",
+        "type": "string",
+        "description": "<p>placeholder for seconds field in timepicker</p>\n"
       },
       {
         "name": "secondsStep",
@@ -3230,21 +3384,6 @@ export const ngdoc: any = {
         "name": "showSpinners",
         "type": "boolean",
         "description": "<p>if true spinner arrows above and below the inputs will be shown</p>\n"
-      },
-      {
-        "name": "hoursPlaceholder",
-        "type": "string",
-        "description": "<p>placeholder for hours field</p>\n"
-      },
-      {
-        "name": "minutesPlacesholder",
-        "type": "string",
-        "description": "<p>placeholder for minutes field</p>\n"
-      },
-      {
-        "name": "secondsPlaceholder",
-        "type": "string",
-        "description": "<p>placeholder for seconds field</p>\n"
       }
     ],
     "outputs": [
@@ -3275,6 +3414,12 @@ export const ngdoc: any = {
         "description": "<p>if true hours and minutes fields will be disabled</p>\n"
       },
       {
+        "name": "hoursPlaceholder",
+        "defaultValue": "HH",
+        "type": "string",
+        "description": "<p>placeholder for hours field in timepicker</p>\n"
+      },
+      {
         "name": "hourStep",
         "defaultValue": "1",
         "type": "number",
@@ -3296,6 +3441,12 @@ export const ngdoc: any = {
         "description": "<p>minimum time user can select</p>\n"
       },
       {
+        "name": "minutesPlaceholder",
+        "defaultValue": "MM",
+        "type": "string",
+        "description": "<p>placeholder for minutes field in timepicker</p>\n"
+      },
+      {
         "name": "minuteStep",
         "defaultValue": "5",
         "type": "number",
@@ -3312,6 +3463,12 @@ export const ngdoc: any = {
         "defaultValue": "false",
         "type": "boolean",
         "description": "<p>if true hours and minutes fields will be readonly</p>\n"
+      },
+      {
+        "name": "secondsPlaceholder",
+        "defaultValue": "SS",
+        "type": "string",
+        "description": "<p>placeholder for seconds field in timepicker</p>\n"
       },
       {
         "name": "secondsStep",
@@ -3342,24 +3499,6 @@ export const ngdoc: any = {
         "defaultValue": "true",
         "type": "boolean",
         "description": "<p>if true spinner arrows above and below the inputs will be shown</p>\n"
-      },
-      {
-        "name": "hoursPlaceholder",
-        "defaultValue": "HH",
-        "type": "string",
-        "description": "<p>placeholder for hours field</p>\n"
-      },
-      {
-        "name": "minutesPlacesholder",
-        "defaultValue": "MM",
-        "type": "string",
-        "description": "<p>placeholder for minutes field</p>\n"
-      },
-      {
-        "name": "secondsPlaceholder",
-        "defaultValue": "SS",
-        "type": "string",
-        "description": "<p>placeholder for seconds field</p>\n"
       }
     ]
   },

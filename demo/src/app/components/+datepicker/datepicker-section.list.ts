@@ -35,6 +35,8 @@ import { DemoDatepickerValueChangeEventComponent } from './demos/value-change-ev
 import { DemoDatePickerVisibilityEventsComponent } from './demos/visibility-events/visibility-events';
 import { DemoTopSectionComponent } from '../../docs/demo-section-components/demo-top-section';
 import { ExamplesComponent } from '../../docs/demo-section-components/demo-examples-section';
+import { DemoDatepickerTodayButtonComponent } from './demos/today-button/today-button';
+import { DemoDatepickerClearButtonComponent } from './demos/clear-button/clear-button';
 
 import {
   NgApiDocComponent,
@@ -356,7 +358,23 @@ export const demoComponentContent: ContentSection[] = [
         description: `<p>Pick previous & current month instead of current & next month.When daterange selected and related to current month,
         daterangepicker will works by default, with current & next month</p>`,
         outlet: DemoDateRangePickerShowPreviousMonth
-      }
+      },
+      {
+        title: 'Show Today Button',
+        anchor: 'datepicker-show-today-button',
+        component: require('!!raw-loader!./demos/today-button/today-button.ts'),
+        html: require('!!raw-loader!./demos/today-button/today-button.html'),
+        description: `<p>Display an optional 'Today' button that will automatically select today's date.</p>`,
+        outlet: DemoDatepickerTodayButtonComponent
+      },
+      {
+        title: 'Show Clear Button',
+        anchor: 'datepicker-show-clear-button',
+        component: require('!!raw-loader!./demos/clear-button/clear-button.ts'),
+        html: require('!!raw-loader!./demos/clear-button/clear-button.html'),
+        description: `<p>Display an optional 'Clear' button that will automatically clear date.</p>`,
+        outlet: DemoDatepickerClearButtonComponent
+      },
     ]
   },
   {

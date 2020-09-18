@@ -19,6 +19,8 @@ import { DemoDatepickerMinModeComponent } from './min-mode/min-mode.component';
 import { DemoDatepickerOutsideClickComponent } from './outside-click/outside-click';
 import { DemoDatepickerPlacementComponent } from './placement/placement';
 import { DemoDatepickerReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { DemoDatepickerTodayButtonComponent } from './today-button/today-button';
+import { DemoDatepickerClearButtonComponent } from './clear-button/clear-button';
 
 import {
   DemoDatePickerSelectDatesFromOtherMonthsComponent
@@ -68,5 +70,7 @@ export const DEMO_COMPONENTS = [
   DemoDatepickerTriggersManualComponent,
   DemoDatepickerValueChangeEventComponent,
   DemoDateRangePickerShowPreviousMonth,
-  DemoDatePickerVisibilityEventsComponent
+  DemoDatePickerVisibilityEventsComponent,
+  DemoDatepickerTodayButtonComponent,
+  DemoDatepickerClearButtonComponent,
 ];

@@ -7,7 +7,7 @@
     </select>
   </div>
   <div class="col-xs-12 col-12 col-sm-5 col-md-6 col-lg-4 form-group">
-    <input placeholder="Datepicker" type="text" class="form-control" bsDatepicker #dp="bsDatepicker">
+    <input placeholder="Datepicker" type="text" class="form-control" bsDatepicker  [bsConfig]="{ showTodayButton: true, todayPosition: 'left',showClearButton: true, clearPosition: 'right',clearButtonLabel:'done'  }" #dp="bsDatepicker">
   </div>
   <div class="col-xs-12 col-12 col-sm-4 col-md-12 col-lg-4 form-group">
     <button class="btn btn-success" (click)="dp.show()" [attr.aria-expanded]="dp.isOpen" type="button">Date Picker</button>
@@ -18,7 +18,7 @@
 <div class="row">
   <div class="col-xs-12 col-12 col-sm-3 col-md-3 col-lg-2 form-group">
     <select
-      class="custom-select form-control "
+      class="custom-select form-control " 
       [(ngModel)]="locale" (ngModelChange)="applyLocale(dpr);">
       <option *ngFor="let loc of locales" [value]="loc">{{ loc }}</option>
     </select>

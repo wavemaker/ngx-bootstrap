@@ -44,12 +44,35 @@ export class BsDatepickerConfig implements DatepickerRenderOptions {
    */
   selectFromOtherMonth?: boolean;
 
-
+ /**
+   * Shows 'today' button
+   */
+  showTodayButton = false;
+  /**
+   * Positioning of 'today' button
+   */
+  todayPosition = 'center';
 
      /**
    * Shows clear button
    */
   showClearButton = false;
+
+
+   /**
+   * Label for 'today' button
+   */
+  todayButtonLabel = 'Today';
+
+  /**
+   * Label for 'clear' button
+   */
+  clearButtonLabel = 'Clear';
+
+  /**
+   * Label for 'custom range' button
+   */
+  customRangeButtonLabel = 'Custom Range';
 
   /**
    * Allows select first date of the week by click on week number
