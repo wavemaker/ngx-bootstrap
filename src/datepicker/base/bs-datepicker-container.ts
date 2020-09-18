@@ -23,7 +23,7 @@ export abstract class BsDatepickerAbstractComponent {
 
   showTodayBtn: boolean;
   todayPos: string;
-  showClearBtn:boolean;
+  showClearBtn: boolean;
   todayBtnLbl: string;
   customRangeBtnLbl: string;
   clearBtnLbl: string;
@@ -69,7 +69,7 @@ export abstract class BsDatepickerAbstractComponent {
 
   monthHoverHandler(event: CellHoverEvent): void {}
 
-  clearDate():void{}
+  clearDate(): void {}
 
   setToday(): void {}
 

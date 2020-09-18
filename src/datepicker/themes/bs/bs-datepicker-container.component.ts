@@ -74,8 +74,8 @@ export class BsDatepickerContainerComponent extends BsDatepickerAbstractComponen
         this.animationState = 'unanimated';
       });
 
-      this.showTodayBtn = this._config.showTodayButton;
-      this.todayPos = this._config.todayPosition;
+    this.showTodayBtn = this._config.showTodayButton;
+    this.todayPos = this._config.todayPosition;
 
     this.isOtherMonthsActive = this._config.selectFromOtherMonth;
     this.containerClass = this._config.containerClass;
@@ -123,13 +123,11 @@ export class BsDatepickerContainerComponent extends BsDatepickerAbstractComponen
     this._store.dispatch(this._actions.select(day.date));
   }
 
-
-
   setToday(): void {
     this._store.dispatch(this._actions.select(new Date()));
   }
 
-  clearDate(){
+  clearDate() {
     this._store.dispatch(this._actions.select(null));
   }
 

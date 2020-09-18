@@ -44,29 +44,22 @@ export class BsDatepickerConfig implements DatepickerRenderOptions {
    */
   selectFromOtherMonth?: boolean;
 
- /**
+  /**
    * Shows 'today' button
    */
   showTodayButton = false;
   /**
    * Positioning of 'today' button
    */
+
   todayPosition = 'center';
 
-     /**
-   * Shows clear button
-   */
+
   showClearButton = false;
 
 
-   /**
-   * Label for 'today' button
-   */
   todayButtonLabel = 'Today';
 
-  /**
-   * Label for 'clear' button
-   */
   clearButtonLabel = 'Clear';
 
   /**
