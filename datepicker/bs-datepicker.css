@@ -297,8 +297,13 @@
       margin-left: 10px; }
     .bs-datepicker-buttons .btn-today-wrapper {
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row wrap; }
+    .bs-datepicker-buttons .today-right {
+      flex-grow: 0; }
+    .bs-datepicker-buttons .today-left {
       flex-grow: 1; }
+    .bs-datepicker-buttons .today-center {
+      flex-grow: 0.5; }
 
 /* .bs-timepicker */
 .bs-timepicker-container {

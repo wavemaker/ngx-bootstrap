@@ -5,4 +5,5 @@ export interface BsCustomDates {
 export declare class BsCustomDatesViewComponent {
     isCustomRangeShown: true;
     ranges: BsCustomDates[];
+    customRangeLabel: string;
 }

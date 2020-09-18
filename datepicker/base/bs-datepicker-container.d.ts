@@ -6,7 +6,11 @@ export declare abstract class BsDatepickerAbstractComponent {
     containerClass: string;
     isOtherMonthsActive: boolean;
     showTodayBtn: boolean;
+    todayPos: string;
     showClearBtn: boolean;
+    todayBtnLbl: string;
+    customRangeBtnLbl: string;
+    clearBtnLbl: string;
     _effects: BsDatepickerEffects;
     _customRangesFish: BsCustomDates[];
     minDate: Date;
@@ -25,8 +29,8 @@ export declare abstract class BsDatepickerAbstractComponent {
     dayHoverHandler(event: CellHoverEvent): void;
     weekHoverHandler(event: WeekViewModel): void;
     monthHoverHandler(event: CellHoverEvent): void;
-    setToday(): void;
     clearDate(): void;
+    setToday(): void;
     yearHoverHandler(event: CellHoverEvent): void;
     daySelectHandler(day: DayViewModel): void;
     monthSelectHandler(event: CalendarCellViewModel): void;
